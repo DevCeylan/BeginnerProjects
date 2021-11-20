@@ -1,6 +1,35 @@
 /* Global */
-html {
+body {
   font-family: "Montserrat-Black", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* headings */
+
+.large-heading {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
 }
 
 /* navbar */
@@ -10,7 +39,7 @@ html {
 }
 
 .navbar-brand {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -24,19 +53,13 @@ html {
 
 /* title */
 
-h1 {
-  font-size: 3rem;
-  line-height: 1.5;
-  font-weight: 900;
-}
-
 #title {
   background-color: #ff4c68;
   color: white;
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 .download-button {
@@ -45,13 +68,18 @@ h1 {
 
 .title-img {
   width: 60%;
-  transform: rotate(30deg);
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
 }
 
 /* features */
+
 #features {
   padding: 7% 15%;
   text-align: center;
+  background-color: white;
+  position: relative;
 }
 .f-icon {
   color: #ef8172;
@@ -99,4 +127,41 @@ h1 {
 
 .pricing-column {
   padding: 3% 2%;
+}
+
+/* cta */
+
+#cta {
+  background-color: #ff4c68;
+  color: white;
+  text-align: center;
+  padding: 7% 15%;
+}
+
+#cta h3 {
+  font-family: "Montserrat-Black", sans-serif;
+}
+
+/* footer */
+
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* Queries */
+
+@media (max-width: 1024px) {
+  .title-img {
+    position: static;
+    transform: rotate(0);
+  }
+
+  #title {
+    text-align: center;
+  }
 }
