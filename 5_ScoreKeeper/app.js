@@ -23,6 +23,8 @@ p1button.addEventListener("click", function () {
     p1Score += 1;
     if (p1Score === winningScore) {
       isGameover = true;
+      p1display.classList.add("winner");
+      p2display.classList.add("loser");
     }
     p1display.textContent = p1Score;
   }
@@ -32,6 +34,8 @@ p2button.addEventListener("click", function () {
     p2Score += 1;
     if (p2Score === winningScore) {
       isGameover = true;
+      p2display.classList.add("winner");
+      p1display.classList.add("loser");
     }
     p2display.textContent = p2Score;
   }
@@ -45,4 +49,6 @@ function resetScores() {
   p2Score = 0;
   p1display.textContent = p1Score;
   p2display.textContent = p2Score;
+  p2display.classList.remove("winner", "loser");
+  p1display.classList.remove("winner", "loser");
 }
