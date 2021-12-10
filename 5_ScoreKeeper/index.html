@@ -6,29 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1><span id="player1-score">0</span> to <span id="player2-score">0</span></h1>
-
-    <select name="" id="range">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
-
-    <button id="btnPlayer1">+1 Player-1</button>
-    <button id="btnPlayer2">+1 Player-2</button>
-    <button id="reset-score">Reset</button>
-
-
-
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="imgs/table-tennis.jpg" alt="" srcset="">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping-Pong Score Keeper
+                            </p>
+                            <button class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="title is-1"><span id="player1-score">0</span> to <span
+                                        id="player2-score">0</span></h1>
+                                <p class="subtitle">Use the buttons to keep score!</p>
+                                <label for="select" class="label is-large is-inline">Playing to:</label>
+                                <div class="select">
+                                    <select name="" id="range">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button id="btnPlayer1" class="is-primary button card-footer-item is-large">+1 Player-1
+                            </button>
+                            <button id="btnPlayer2" class="is-info button card-footer-item is-large">+1 Player-2
+                            </button>
+                            <button id="reset-score" class="is-danger button card-footer-item is-large">Reset
+                                Scores</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
