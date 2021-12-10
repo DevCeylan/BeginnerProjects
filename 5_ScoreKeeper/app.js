@@ -1,15 +1,22 @@
 // DOM elements:
 const p1button = document.querySelector("#btnPlayer1");
 const p2button = document.querySelector("#btnPlayer2");
+const reset = document.querySelector("#reset-score");
+const setWinningScore = document.querySelector("#range");
 
 const p1display = document.querySelector("#player1-score");
 const p2display = document.querySelector("#player2-score");
 
 let p1Score = 0;
 let p2Score = 0;
-let winningScore = 5;
+let winningScore = 3; // default winning condition
 let isGameover = false;
 // Event Listeners
+
+setWinningScore.addEventListener("change", () => {
+  winningScore = parseInt(setWinningScore.value);
+  resetScores();
+});
 
 p1button.addEventListener("click", function () {
   if (!isGameover) {
@@ -29,3 +36,13 @@ p2button.addEventListener("click", function () {
     p2display.textContent = p2Score;
   }
 });
+
+reset.addEventListener("click", resetScores);
+
+function resetScores() {
+  isGameover = false; // reset the game if anyone has winning score
+  p1Score = 0;
+  p2Score = 0;
+  p1display.textContent = p1Score;
+  p2display.textContent = p2Score;
+}
